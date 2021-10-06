@@ -2,6 +2,7 @@ import React from "react";
 import Weather from './weather'
 import './index.css'
 import Cyties from './cyties'
+import Hotels from './map'
 import Nav from './nav'
 // import CityWeather from "./weather/CityWeather";
 import {
@@ -23,7 +24,7 @@ function App() {
 <div className='weatherBk' ></div>
 <Nav/>
 <Switch  >
-<Route path='/cyties' >
+<Route path='/Cities' >
 <Cyties/>
 </Route>   
                 <Route exact path='/' ><div>this is the default</div></Route>
@@ -31,7 +32,9 @@ function App() {
 <Weather/>
                     </Route>
          
-
+<Route>
+    <Hotels/>
+</Route>
 </Switch>
 </div>
             </Router>

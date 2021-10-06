@@ -7,7 +7,6 @@ import CloudIcon from '@material-ui/icons/Cloud';
 import LocationCityIcon from '@material-ui/icons/LocationCity';
 import LocalHotelIcon from '@material-ui/icons/LocalHotel';
 function Nav() {
-    console.log(useLocation())
     const useStyles = makeStyles({
     Normal: {
 backgroundColor: 'white'
