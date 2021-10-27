@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components'
-
+import App from './App'
+import TutorialMaterialUi from './materialUI/tutorial'
+import 'dotenv' 
+// import FrameMotion from './framer-motion'
+console.log(process.env)
 ReactDOM.render(
-<App/> ,
+  <App/>,
   document.getElementById('root')
 );
