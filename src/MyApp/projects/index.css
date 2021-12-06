@@ -1,0 +1,206 @@
+.projectsComponent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  flex-direction: column;
+  background: linear-gradient(black, rgb(31, 28, 28), rgb(1, 8, 6));
+}
+.projectsComponent > h1 {
+  margin: 20px;
+  text-transform: capitalize;
+  font-weight: bolder;
+  font-style: oblique;
+  color: rgb(214, 211, 211);
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 2px 1px 3px yellow;
+  letter-spacing: 2px;
+}
+.projectsComponent > p {
+  font-weight: bolder;
+  font-size: 1.5;
+  color: whitesmoke;
+  width: 60%;
+  height: auto;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+}
+.Projects {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 30px;
+  box-shadow: 2px 2px 2px white, -1px -1px 2px white;
+  width: 90vw;
+  padding: 30px;
+  border-radius: 15px;
+}
+.projectComponent {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 3px 3px 5px yellow, -2px -2px 5px yellow;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 20px;
+  position: relative;
+}
+
+.projectComponent > h2 {
+  color: yellow;
+  font-weight: bolder;
+  font-style: oblique;
+  text-shadow: 2px 2px 5px yellow;
+  text-transform: capitalize;
+  margin: 20px;
+}
+.projectComponent > .progectdesc {
+  font-family: Verdana, Tahoma, sans-serif;
+  font-weight: bolder;
+  font-size: larger;
+  min-height: 250px;
+  color: white;
+  font-size: 20px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  /* border: 2px solid red; */
+}
+
+.footer {
+  width: 100%;
+  height: 20vh;
+  border-top: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.links > a {
+  margin: 5px;
+  text-decoration: none;
+  color: yellow;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.links > a:hover {
+  color: rgb(125, 223, 35);
+  text-shadow: 2px 2px 5px yellow;
+}
+.ProgectLogo {
+  width: 20%;
+  height: 90%;
+  border-radius: 20px;
+  box-shadow: 4px 4px 6px rgb(232, 233, 226);
+  background-position: center;
+  background-size: cover;
+}
+.progectTechnologies {
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100%;
+  height: 110px;
+  border-top: 2px solid white;
+  flex-direction: column;
+  margin: 10px;
+}
+.progectTechnologies > .title {
+  color: yellow;
+  font-weight: bolder;
+  font-size: 26px;
+  text-transform: capitalize;
+  font-family: serif;
+}
+.tecknologiesList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  /* text-shadow: 2px 2px 4px white; */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 23px;
+  overflow: hidden;
+}
+@media all and (max-width: 500px) {
+  .projectsComponent > p {
+    font-size: 20px;
+    width: 95vw;
+    box-shadow: 2px 2px 3px whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+  }
+  .Projects {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    box-shadow: 2px 2px 2px white, -1px -1px 2px white;
+    width: 100vw;
+    padding: 5px;
+    border-radius: 15px;
+  }
+  .projectComponent {
+    margin-top: 25px;
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .links > a {
+    text-decoration: none;
+    color: yellow;
+    font-weight: bolder;
+    cursor: pointer;
+    font-size: 20px;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .links > a:hover {
+    color: rgb(125, 223, 35);
+    text-shadow: 2px 2px 5px yellow;
+  }
+  .ProgectLogo {
+    width: 150px;
+    height: 17vh;
+    border-radius: 20px;
+    box-shadow: 4px 4px 6px rgb(232, 233, 226);
+    background-position: center;
+    background-size: cover;
+  }
+  .progectTechnologies {
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    min-height: fit-content;
+    /* background-color: aliceblue; */
+    border-top: 2px solid white;
+    flex-direction: column;
+    margin: 10px;
+  }
+  .progectTechnologies > .title {
+    color: yellow;
+    font-weight: bolder;
+    font-size: 26px;
+    margin: 20px;
+    text-transform: capitalize;
+    font-family: serif;
+  }
+}

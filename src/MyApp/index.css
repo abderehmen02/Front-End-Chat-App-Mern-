@@ -1,0 +1,7 @@
+.myApp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  flex-direction: column;
+}

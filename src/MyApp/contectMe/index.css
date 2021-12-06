@@ -1,0 +1,161 @@
+.ContactForm {
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  background-color: whitesmoke;
+  box-shadow: -50px, 0px, 10px, black;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 20%;
+  margin: 20px;
+  flex-direction: column;
+}
+.ContactFormTitle {
+  font-size: 35px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+.ContactFormText {
+  margin: 20px;
+  text-transform: capitalize;
+  /* background-color: black; */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  /* color: white; */
+}
+.forms {
+  display: flex;
+  align-items: center;
+  /* background: linear-gradient(0.25turn, #000000, #161814, rgb(248, 248, 248)); */
+  width: 100vw;
+  text-shadow: 2px 2px 3px black;
+
+  /* border: 2px solid green; */
+  height: 63%;
+  justify-content: center;
+}
+.contact-form {
+  display: flex;
+  width: 70%;
+  height: 100%;
+  align-items: center;
+  box-shadow: 2px 2px 5px rgb(245, 245, 245);
+  justify-content: space-around;
+  background-color: white;
+  border-radius: 20px;
+  color: black;
+  box-shadow: 2px 2px 5px black;
+  flex-direction: column;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: oblique;
+  font-size: 20px;
+}
+.ContactMedea {
+  width: 40%;
+  height: 65%;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 10px;
+  justify-content: space-around;
+  flex-direction: column;
+  /* border: 1px solid red; */
+}
+.contact-form > h2 {
+  margin: 30px;
+  font-style: oblique;
+  text-transform: capitalize;
+}
+.ContactSend {
+  border: none;
+  width: 100%;
+  padding: 15px;
+  background-color: black;
+  color: yellow;
+  cursor: pointer;
+  font-size: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.ContactSend:hover {
+  color: black;
+  background-color: yellow;
+  box-shadow: 2px 2px 5px black;
+}
+.ContactFormText {
+  box-shadow: 2px 2px 5px white;
+  border-radius: 10px;
+  padding: 20px;
+}
+.instruction {
+  color: rgb(7, 7, 6);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: 20px;
+  margin: 20px;
+}
+a {
+  text-decoration: none;
+  color: rgb(17, 15, 15);
+}
+.medeaList {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+  /* background-color: aliceblue; */
+}
+.medeaList > li,
+.medeaList > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+
+  text-shadow: 2px 2px 5px rgb(12, 12, 10);
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.medeaList > li > a:hover,
+.medeaList > li > a:hover {
+  font-weight: bolder;
+  text-shadow: 2px 2px 5px yellow;
+}
+.medeaList > li > a {
+  width: 50%;
+}
+.medeaList > li > a > span {
+  margin-right: 15px;
+}
+@media all and (max-width: 500px) {
+  .forms {
+    flex-direction: column;
+  }
+  .contact-form {
+    width: 95vw;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+  }
+  .contact-form h2 {
+    font-size: 20px;
+  }
+  .contact-form span {
+    display: none;
+  }
+  .ContactMedea {
+    margin-top: 20px;
+    width: 100%;
+    font-size: 16px;
+  }
+}
