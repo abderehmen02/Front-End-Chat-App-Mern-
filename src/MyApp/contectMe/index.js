@@ -6,7 +6,7 @@ import TextField from '@material-ui/core/TextField' ;
 import {makeStyles} from '@material-ui/core'
 import LocalPhoneIcon from '@material-ui/icons/LocalPhone';
 import './index.css'
-import emailjs from 'emailjs-com'  
+// import emailjs from 'emailjs-com'  
 
 const useStyles = makeStyles({
  textInput : {
@@ -24,12 +24,7 @@ const classes = useStyles()
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_quyfb8o', 'template_9azz26i', form.current, 'user_1qwbYVqyj01JlFVQ8wWMY')
-      .then((result) => {
-          setButtonText('sent')
-      }, (error) => {
-alert(error.text)
-      });
+  console.log(e)
   };
   
 return (
