@@ -11,7 +11,7 @@ const technologyAnimation = {
     hover: {
         scale: 1.1 ,
         textShadow: "1px 1px 2px black",
-        transition : { duration : 0.5  }
+        transition : { duration : 1 }
     } , 
     right : {
         x: 500 ,
@@ -44,65 +44,65 @@ function Home() {
    const HtmlAnimation = useAnimation() ;
   const [OpenDropDown , setOpenDropDown] = useState(false)
   const [Name, setName] = useState('abderehmen') ;
-//   setInterval(()=>{
-// if(animationTime === 0){
-//     JavaScriptAnimation.start({
-//         scale: [ 1.5 ,  1 ] ,
-//         rotate: 360 , 
-//         transition : {
-//             ease: "easeOut" , 
-//             rotate: { delay : 1  } 
-//         }
-//     }) ; 
+  setInterval(()=>{
+if(animationTime === 0){
+    JavaScriptAnimation.start({
+        scale:  [1 ,  1.5  , 1 ] ,
+        rotate: 360 , 
+        transition : {
+            ease: "easeOut" , 
+            rotate: { delay : 1  } 
+        }
+    }) ; 
     
-//     animationTime += 1 ;
-// }
-// else if(animationTime === 1 ){
-//      ReactAnimation.start({
-//         scale: [ 1.5 ,  1 ] ,
-//                 rotate: 360 , 
-//         transition : {
-//             ease: "easeOut" , 
-//             rotate: { delay : 1} 
-//         }
-//     }) ; 
-//     animationTime += 1 ;
-// }
-// else if(animationTime === 2 ){
-//      MaterialUiAnimation.start({
-//         scale: [1 ,  1.5  , 1 ] ,
-//                 rotate: 360 , 
-//         transition : {
-//             ease: "easeOut" , 
-//             rotate: { delay : 1} 
-//         }
-//     }) ; 
-//     animationTime += 1 ;
-// }
-// else if(animationTime === 3 ){
-//      NodeJsAnimation.start({
-//         scale: [1 , 1.5 , 1 ] ,
-//                 rotate: 360 , 
-//         transition : {
-//             ease: "easeOut" , 
-//             rotate: { delay : 1} 
-//         }
-//     }) ; 
-//     animationTime += 1 ;
-// }
-// else if(animationTime === 4 ){
-//      HtmlAnimation.start({
-//         scale: [ 0.2 , 1.5 , 1 ] ,
-//                 rotate: 360 , 
-//         transition : {
-//             ease: "easeOut" , 
-//             rotate: { delay : 1} 
-//         }
-//     }) ; 
-//     animationTime = 0;
-// }
+    animationTime += 1 ;
+}
+else if(animationTime === 1 ){
+     ReactAnimation.start({
+        scale:  [1 ,  1.5  , 1 ] ,
+                rotate: 360 , 
+        transition : {
+            ease: "easeOut" , 
+            rotate: { delay : 1} 
+        }
+    }) ; 
+    animationTime += 1 ;
+}
+else if(animationTime === 2 ){
+     MaterialUiAnimation.start({
+        scale: [1 ,  1.5  , 1 ] ,
+                rotate: 360 , 
+        transition : {
+            ease: "easeOut" , 
+            rotate: { delay : 1} 
+        }
+    }) ; 
+    animationTime += 1 ;
+}
+else if(animationTime === 3 ){
+     NodeJsAnimation.start({
+        scale: [1 , 1.5 , 1 ] ,
+                rotate: 360 , 
+        transition : {
+            ease: "easeOut" , 
+            rotate: { delay : 1} 
+        }
+    }) ; 
+    animationTime += 1 ;
+}
+else if(animationTime === 4 ){
+     HtmlAnimation.start({
+        scale:  [1 ,  1.5  , 1 ] ,
+                rotate: 360 , 
+        transition : {
+            ease: "easeOut" , 
+            rotate: { delay : 1} 
+        }
+    }) ; 
+    animationTime = 0;
+}
 
-//   } , 5000 )
+  } , 5000 )
       return (
           <div>
 <div className='homeComponent' >
