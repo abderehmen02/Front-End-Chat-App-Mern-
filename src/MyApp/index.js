@@ -1,17 +1,22 @@
-import React , { useEffect , useState } from 'react'
+import React , { useEffect , useRef , useState } from 'react'
 import Home from './home'
 import Protfolio from './Protfolio'
 import Projects from './projects'
 import ContectMe from './contectMe'
-import DropDown from './dropDown'
+import DropDown from './Navigation'
 import './index.css'
 import {InView, useInView} from 'react-intersection-observer';
+export const  MyContext = React.createContext()
 function App() {
 const [homeRef , isViewHome ] = useInView()
+const HomeReference = useRef()
+const ProjectsReference = useRef() 
+const PortfolioReference = useRef() 
+const ContactMeReference = useRef()
 const [ContactMeRef , isViewContact ] = useInView()
 const [ProtfolioRef , isViewProtfolio ] = useInView()
 const [ProjectsRef , isViewProject ] = useInView()
-const [InViewComponent, setInViewComponent] = useState('home')
+const [InViewComponent, setInViewComponent] = useState('Home')
 const [ChangebleComponent, setChangebleComponent] = useState(false)
 // const taggleComponent = (component ,  inview)=>{
 //     console.log( 'component '  + component , inview , 'inViewComponent' + InViewComponent  ) ;
@@ -34,31 +39,46 @@ const [ChangebleComponent, setChangebleComponent] = useState(false)
 // // }
 // }
 useEffect(()=>{
+
+if(isViewHome){
+  setInViewComponent('Home')
+}
+if(isViewProtfolio){
+  setInViewComponent('portfolio')
+}
+if(isViewProject){
+  setInViewComponent('Projects')
+}
 if(isViewContact){
     setInViewComponent('ContactMe')
 }
 } , [isViewContact , isViewHome , isViewProject , isViewProtfolio] )
+
+// console.log(HomeReference.current.scrollIntoView) }
 // useEffect(() => {
 //     console.log(window.scrollY);
 //     if(window.scrollY === 0){
 //         taggleComponent('home' , true)
 //     }
 // }, [window.scrollY])
-return (        <div className="myApp">
+return (    
+      <div className="myApp">
+      <MyContext.Provider value={ { HomeReference ,  ProjectsReference , PortfolioReference , ContactMeReference }} >
+<DropDown component={InViewComponent} />
+    
 {/* <InView onChange={(inview)=>{taggleComponent('home', inview)}} > */}
-     <div ref={homeRef} >   <Home  /> </div>
+     <div ref={   HomeReference } ><div ref={homeRef} >    <Home  /> </div> </div>
         {/* </InView> */}
 {/* <InView onChange={(inview)=>{taggleComponent('Protfolio' , inview )}} >      */}
- <div ref={ProtfolioRef} >  <Protfolio/></div> 
+ <div ref={   PortfolioReference } > <div ref={ProtfolioRef} >  <Protfolio /> </div> </div> 
 {/* // </InView> */}
   {/* <InView onChange={(inview)=>{taggleComponent('Progects' , inview )}} > */}
-<div ref={ProjectsRef} >     <Projects/></div>
+<div ref={ProjectsRef , ProjectsReference} > <div ref={ProjectsRef} >    <Projects/> </div> </div>
       {/* </InView> */}
  {/* <InView onChange={(inview)=>{taggleComponent('ContactMe' , inview )}} >     */}
-  <div ref={ContactMeRef} > <ContectMe/></div>
+  <div ref={ContactMeRef , ContactMeReference } > <div ref={ContactMeRef} > <ContectMe/> </div> </div>
  {/* </InView>  */}
-    <DropDown component={InViewComponent} />
-    
+    </MyContext.Provider>
         </div>
     )
 }

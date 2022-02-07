@@ -58,18 +58,8 @@
   text-transform: capitalize;
   box-shadow: 2px 2px 3px whitesmoke;
 }
-/* . {
-  width: 90%;
-  text-align: center;
-  font-weight: bolder;
-  font-size: 1.5em;
-  font-style: oblique;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  text-shadow: 2px 2px 3px white;
-  color: yellow;
-} */
+
 .SkillComponent {
-  margin: 5vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -77,19 +67,20 @@
   position: relative;
   flex-direction: row;
   color: white;
-  width: 90vw;
   box-shadow: 2px 2px 5px white;
-  border-radius: 10px;
-  min-height: 55vh;
+  border-radius: 20px;
+  min-height: 300px;
   padding: 10px;
+  margin: 10px;
+  z-index: 1;
+  border: 2px solid green;
 }
 .skilInfo > p {
   display: flex;
   align-items: center;
   justify-content: center;
-
   margin: 5px;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: bolder;
   font-family: sans-serif;
   width: 60%;
@@ -101,10 +92,12 @@
   justify-content: space-around;
   flex-direction: column;
   height: 36vh;
+  z-index: 2;
 }
 .skillImage {
-  width: 40%;
-  height: 50vh;
+  width: 100%;
+  position: absolute;
+  height: 100%;
   border-radius: 15px;
   box-shadow: 2px 2px 5px white;
   background-size: cover;
@@ -123,21 +116,32 @@
   text-shadow: 2px 2px 2px yellow;
   text-transform: capitalize;
 }
-.SkillComponent > p {
-  font-size: large;
+.skilInfo > p {
+  font-size: normal;
   text-transform: capitalize;
+  text-shadow: 2px 2px 4px black;
 }
 .mySkills {
   padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-  /* box-shadow: 2px 2px 5px white; */
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   border-radius: 10px;
-  /* background-color: aqua; */
+  width: 95vw;
 }
-@media all and (max-width: 500px) {
+.SkillComponent > button {
+  color: white;
+  box-shadow: 2px 2px 4px yellow;
+  color: black;
+  font-weight: bolder;
+  z-index: 2;
+  font-size: larger;
+  border-radius: 15px;
+  align-self: flex-end;
+
+  padding: 5px 20px;
+}
+@media all and (max-width: 600px) {
   .protfolioResume {
     font-size: 20px;
     width: 100%;
@@ -146,26 +150,6 @@
     box-shadow: 2px 2px 3px whitesmoke;
   }
 
-  /* . {
-  width: 90%;
-  text-align: center;
-  font-weight: bolder;
-  font-size: 1.5em;
-  font-style: oblique;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  text-shadow: 2px 2px 3px white;
-  color: yellow;
-} */
-  .mobileBk {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 26, 255, 0.5);
-    z-index: 1;
-  }
   .SkillComponent {
     margin: 5vh;
     position: relative;
@@ -176,9 +160,9 @@
     flex-direction: row;
     color: white;
     width: 90vw;
+    min-height: 60vh;
     box-shadow: 2px 2px 5px white;
     border-radius: 10px;
-    min-height: 55vh;
     padding: 10px;
   }
   .skilInfo > p {
@@ -194,7 +178,6 @@
     z-index: 2;
     text-shadow: 2px 2px 3px black;
     text-transform: capitalize;
-
     width: 60%;
     height: 90%;
   }
@@ -203,7 +186,8 @@
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    height: 36vh;
+    text-transform: capitalize;
+    height: 100%;
   }
   .skillImage {
     z-index: -1;
@@ -235,13 +219,10 @@
     text-transform: capitalize;
   }
   .mySkills {
-    padding: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+
     flex-direction: column;
-    /* box-shadow: 2px 2px 5px white; */
-    border-radius: 10px;
-    /* background-color: aqua; */
   }
 }

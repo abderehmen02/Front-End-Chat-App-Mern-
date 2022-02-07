@@ -1,0 +1,26 @@
+.choosed {
+  color: brown;
+  background-color: aqua;
+  width: 100%;
+  text-shadow: 2px 2px 5px black;
+  font-weight: bolder;
+}
+.notChoosed:hover {
+  background-color: aquamarine;
+  color: brown;
+}
+.dropDownComponent {
+  background-color: #fff;
+  position: relative;
+  top: 10px;
+  right: 10px;
+  width: auto;
+  height: 90vh;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  opacity: 2;
+  z-index: 1;
+}

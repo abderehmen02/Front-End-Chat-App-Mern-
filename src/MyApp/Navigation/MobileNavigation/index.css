@@ -1,0 +1,24 @@
+.mobileNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: fit-content;
+  background-color: black;
+  flex-direction: column;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+}
+.listIcon {
+  height: fit-content;
+  background-color: whitesmoke;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -3,61 +3,17 @@
   height: fit-content;
   display: flex;
   align-items: center;
-  background-color: whitesmoke;
-  box-shadow: -50px, 0px, 10px, black;
+  background-color: black;
+  color: white;
   justify-content: space-around;
   flex-direction: column;
 }
-.header {
+.Forms {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 20%;
-  margin: 20px;
-  flex-direction: column;
-}
-.ContactFormTitle {
-  font-size: 35px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bolder;
-  text-transform: capitalize;
-}
-.ContactFormText {
-  margin: 20px;
-  text-transform: capitalize;
-  /* background-color: black; */
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 25px;
-  /* color: white; */
-}
-.forms {
-  display: flex;
-  align-items: center;
-  /* background: linear-gradient(0.25turn, #000000, #161814, rgb(248, 248, 248)); */
-  width: 100vw;
-  text-shadow: 2px 2px 3px black;
-
-  /* border: 2px solid green; */
-  height: 63%;
-  justify-content: center;
-}
-.contact-form {
-  display: flex;
-  width: 70%;
-  height: 100%;
-  align-items: center;
-  box-shadow: 2px 2px 5px rgb(245, 245, 245);
   justify-content: space-around;
-  background-color: white;
-  border-radius: 20px;
-  color: black;
-  box-shadow: 2px 2px 5px black;
-  flex-direction: column;
-  font-weight: bolder;
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: oblique;
-  font-size: 20px;
+  width: 100vw;
+  flex-direction: row;
 }
 .ContactMedea {
   width: 40%;
@@ -65,40 +21,18 @@
   text-transform: capitalize;
   display: flex;
   align-items: center;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+  border-top: 3px solid yellow;
+  border-bottom: 3px solid yellow;
+  border-left: 1px solid yellow;
+  border-right: 1px solid yellow;
+  padding: 10px;
   border-radius: 10px;
   justify-content: space-around;
   flex-direction: column;
-  /* border: 1px solid red; */
 }
-.contact-form > h2 {
-  margin: 30px;
-  font-style: oblique;
-  text-transform: capitalize;
-}
-.ContactSend {
-  border: none;
-  width: 100%;
-  padding: 15px;
-  background-color: black;
-  color: yellow;
-  cursor: pointer;
-  font-size: 23px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.ContactSend:hover {
-  color: black;
-  background-color: yellow;
-  box-shadow: 2px 2px 5px black;
-}
-.ContactFormText {
-  box-shadow: 2px 2px 5px white;
-  border-radius: 10px;
-  padding: 20px;
-}
+
 .instruction {
-  color: rgb(7, 7, 6);
+  color: wheat;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
   font-size: 20px;
@@ -106,14 +40,12 @@
 }
 a {
   text-decoration: none;
-  color: rgb(17, 15, 15);
+  color: white;
 }
 .medeaList {
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   flex-direction: column;
-  /* background-color: aliceblue; */
 }
 .medeaList > li,
 .medeaList > li > a {
@@ -121,15 +53,15 @@ a {
   align-items: center;
   justify-content: space-between;
   font-size: 20px;
-
-  text-shadow: 2px 2px 5px rgb(12, 12, 10);
+  color: white;
+  text-shadow: 2px 2px 5px yellow;
   margin-top: 15px;
   cursor: pointer;
 }
 
 .medeaList > li > a:hover,
 .medeaList > li > a:hover {
-  font-weight: bolder;
+  color: yellow;
   text-shadow: 2px 2px 5px yellow;
 }
 .medeaList > li > a {
@@ -138,24 +70,176 @@ a {
 .medeaList > li > a > span {
   margin-right: 15px;
 }
+.Form {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  width: 50vw;
+  height: fit-content;
+  box-shadow: 2px 2px 3px white, -2px -2px 3px wheat;
+  flex-direction: column;
+  border-radius: 10px;
+  margin: 10px;
+}
+.Form > button {
+  width: 400px;
+  color: black;
+  background-color: wheat;
+  border-radius: 15px;
+  font-size: larger;
+  padding: 10px;
+  margin: 20px;
+  cursor: pointer;
+}
+.Form > button:hover {
+  background-color: black;
+  color: yellow;
+  box-shadow: 0 3px 10px yellow;
+  border-color: yellow;
+}
+.ContactForm > h3 {
+  font-size: 2em;
+  font-family: "Courier New", Courier, monospace;
+  font-style: italic;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  text-shadow: 0px 3px 0px #b2a98f;
+  font-weight: bold;
+}
+.inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+}
+.notRequired {
+  color: rgb(10, 230, 10);
+  font-weight: bolder;
+}
+.required {
+  color: rgb(226, 21, 21);
+  font-weight: bolder;
+}
+.imageComponent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100px;
+  position: relative;
+}
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: whitesmoke;
+  margin: 0px;
+  z-index: 0;
+  position: absolute;
+  left: 0px;
+}
+.myImgContactMe {
+  border-radius: 50%;
+  border: 2px solid white;
+  z-index: 1;
+  background-color: #03a9f4;
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+}
 @media all and (max-width: 500px) {
-  .forms {
+  .Forms {
     flex-direction: column;
   }
   .contact-form {
-    width: 95vw;
+    width: 90vw;
     padding-bottom: 50px;
     margin-bottom: 20px;
   }
-  .contact-form h2 {
-    font-size: 20px;
-  }
-  .contact-form span {
-    display: none;
-  }
   .ContactMedea {
-    margin-top: 20px;
-    width: 100%;
+    margin: 20px 0px;
+    width: 90%;
     font-size: 16px;
+  }
+  .Form {
+    width: 100vw;
+  }
+  .Form > button {
+    width: 250px;
+  }
+
+  .textField {
+    width: 250px;
+  }
+  .inputContainer > span {
+    width: 50px;
+  }
+}
+.content {
+  position: relative;
+  border: 2px solid red;
+}
+
+.content h2 {
+  color: #fff;
+  font-size: 2em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.content h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 1px #03a9f4;
+}
+
+.content h2:nth-child(2) {
+  color: #03a9f4;
+  animation: animate 4s ease-in-out infinite;
+}
+.demo {
+  width: 90vw;
+  font-size: larger;
+  font-family: "Courier New", Courier, monospace;
+  font-style: italic;
+  font-weight: bolder;
+  text-align: center;
+  margin: 10px;
+  background: -webkit-linear-gradient(
+    rgb(255, 145, 0),
+    rgb(255, 230, 0),
+    rgb(227, 228, 161)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* animation: changeGradient 2s infinite; */
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
   }
 }
