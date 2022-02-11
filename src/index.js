@@ -1,12 +1,11 @@
 import React from 'react'
 import reactDom from 'react-dom'
-import MyApp from './MyApp/index'
+import MyRouter from './router/MyRouter'
 function App() {
     return (
         <div>
-<MyApp/>
+            <MyRouter/>
         </div>
-// https://drive.google.com/file/d/1IVmhPR7q5OmbNP-I6vVcAvb6t-N7kmGz/view
     )
 }
 reactDom.render( <App/> , document.getElementById('root') )
