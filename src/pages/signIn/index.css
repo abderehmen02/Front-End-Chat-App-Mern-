@@ -1,0 +1,13 @@
+.signInComponent{
+    width: 100vw;
+    height: 100vh
+}
+.signInButton{
+ padding: 0 20px;
+ 
+ border-radius: 20px;
+}
+.signInText{
+    text-shadow: 2px 2px 5px rgb(8, 91, 207);
+
+}

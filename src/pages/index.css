@@ -1,0 +1,105 @@
+.signUpComponent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color:black ; 
+    flex-direction: column;
+    color: white;
+}
+.signUpTitle{
+    color: wheat;
+    font-size: 2.1em;
+    font-family: cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    text-shadow: 2px 2px 3px white ;
+    height: 20vh;
+}
+.signUpForm{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50vw ;
+    box-shadow: 2px 2px 5px wheat;
+    flex-direction: column;
+    margin: 20px;
+    height: 100%;
+}
+.signUpForm > div{
+    width: 80%;
+    position: relative;
+    
+}
+.signUpForm  input , .interestsBtn  {
+ align-self: flex-end;   
+ justify-self: flex-end;
+ position: absolute;
+ right: 20px;
+ color: wheat ; 
+ background-color: black;
+ text-align: center;
+ border: 2px solid white;
+ border-radius: 10px;
+}
+.signUpForm input:focus {
+    box-shadow: 3px 3px 6px yellow  , -3px -3px 6px yellow;
+}
+.signUpForm > div> label {
+    font-family: cursive;
+    color: white ; 
+    font-size: 1.1em;
+    text-transform : capitalize ; 
+    
+}
+.signUpBtn {
+padding: 15px  80px;
+margin: 50px; 
+color: white ;
+background-color: black;
+font-size: 1.3em;
+font-family: cursive;
+font-style: italic;
+border-radius: 5px;
+box-shadow: 2px 2px 3px white;
+}
+.signUpBtn:hover{
+box-shadow: 2px 2px 4px yellow , -2px -2px 4px;
+color: yellow;
+}
+.labelSelect{
+    width: 200px;
+}
+.interestsBtn{
+    max-width: 100px;
+    color: transparent;
+}
+.UserError{
+    color: red
+}
+.userNameError{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse; 
+    /* border: 2px solid red; */
+    margin-right: 10px;
+    margin-top: -10px;
+}
+.UserError{
+     margin-right: 25px;
+}
+@media screen and (max-width: 500px) {
+ .signUpForm{
+    width: 95vw;
+ }   
+ .signUpForm > div{
+    width: 100%;
+ }
+ .signUpForm  label{
+/* border: 1px solid red ; */
+width: 150px;
+ }
+}

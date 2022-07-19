@@ -1,0 +1,211 @@
+.profileImage{
+    width: 200px;
+    border: 2px solid black;
+    height: 200px;
+    background-size: cover;
+    background-image: 'https://lh3.googleusercontent.com/ogw/ADea4I5EVPv6H7owdOliH0F2m2X9hMY_ikS78mSo_7M2=s64-c-mo'
+}
+.settingsComponent{
+    text-transform : capitalize ; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction : column  ; 
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+    color  : white ; 
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-style: oblique;
+    
+}
+.settingsLabel {
+    width: 200px;
+  
+    /* border: 2px solid red; */
+    text-align: center;
+    text-shadow: 2px 2px 3px black;
+}
+.settingsInput {
+    width: 300px;
+  
+    border-radius : 5px ;
+    background-color: black;
+    color: yellow;
+    text-align: center;
+}
+.notRquired{
+    display: none;
+}
+.settingsInput:focus{
+    box-shadow: 2px 2px 4px   yellow  , -2px -2px 4px yellow ;
+    border: 2px groove yellow;
+}
+.settingsForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column ;
+    /* border: 2px solid red; */
+}
+.settingsForm > div {
+    margin-top: 20px ;  
+    width: 120%;
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.settingsComponent button {
+    width: 200px;
+    border-radius: 10px;
+    margin: 50px;
+    background-color: black;
+    color: yellow;
+}
+.settingsComponent button:hover{
+    box-shadow: 2px 2px 3px yellow;
+}
+.required  {
+    color: orange;
+    font-size: normal;
+    font-weight : normal ; 
+    width: 100px;
+}
+.notRquired{
+    width: 100px;
+}
+.requiredSiglaled{
+    color: red;
+    text-shadow: 2px 2px 4px orangered;
+    font-size: large;
+    animation-name : sign ; 
+    animation-duration : 3s ; 
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    font-size: 20px;
+    margin: 0px;
+    width: 100px;
+}
+.settingsComponent >h2{
+    font-family: cursive;
+    font-style: italic;
+    
+    text-shadow: 2px 2px 3px yellow;
+    margin: 50px;
+}
+#fileInput{
+    display: none;
+}
+.fileLabel{
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid yellow;
+    box-shadow: 2px 2px 4px yellow , -2px -2px 4px yellow;
+}
+.fileLabel{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    position: relative;
+}
+.settingsHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 30vw;
+    height: 20vh;
+    margin-top: 0px;
+}
+.overlayProfileImg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    z-index: 1;
+    opacity: 0.3;
+    border-radius: 50%;
+}
+.mobileBreaker{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 350px;
+}
+.mobileBreaker > input{
+    width: 240px;   
+}
+.required{
+    width: 50px;
+    margin: 0px;
+}
+.edit{
+    z-index: 2;
+    font-weight: bold;
+    text-shadow: 2px 2px  3px black;
+    font-family: cursive;
+    font-style: italic;
+    
+    font-size: 1.2em;
+}
+.updatedFrame{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    height: 20vh;
+    z-index: 2;
+    color: green ;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: cursive;
+    background-color: rgb(206, 249, 141);
+    text-shadow: 2px 2px 3px whitesmoke;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+@media screen and (max-width: 500px) {
+ .settingsComponent{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 100vw;
+ }
+ .settingsForm{
+    /* border: 2px solid red; */
+    width: 95vw;
+ }
+ .settingsInput{
+width: 200px;
+ }
+ .settingsForm label{
+    width: 100px;
+    overflow-y: visible;
+    /* border: 2px solid red; */
+ }
+ .mobileBreaker{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: fit-content;
+ }
+ .notRquired{
+    display: none;
+ }
+ .settingsHeader{
+        width: 80vw;
+ }
+ 
+}

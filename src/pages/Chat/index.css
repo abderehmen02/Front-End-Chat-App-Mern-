@@ -1,0 +1,62 @@
+.chatComponent{
+    width: 100vw;
+}
+.chatTitel {
+ text-shadow: 2px 2px 3px white;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ text-transform: capitalize;
+ margin: 50px;
+}
+
+.searchInput{
+border-radius: 10px;
+height: 2rem;
+}
+.searchInput:focus{
+    box-shadow: 2px 2px 3px white ;
+}
+.model{
+    border-radius: 10px;
+    width: 450px;
+    padding: 30px;
+}
+.ModelTitle{
+    font-family: sans-serif;
+    font-style: italic;
+    text-transform: capitalize;
+    margin: 20px;
+    margin-top: 0px;
+    color: yellow;
+    text-shadow: 5px 5px 8px black;
+}
+.modelItem{
+    box-shadow: 1px 1px 5px wheat;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 5px;
+}
+.modelItem:hover{
+    background-color: white ; 
+    color: black;
+    text-shadow: 2px 2px 3px black;
+}
+.header {
+    height: 15vh;
+    box-shadow: 2px 2px 5px wheat;
+    border-radius: 10px;
+    width: 450px ;
+    cursor: pointer;
+}
+.info{
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    box-shadow: 1px 1px 2px aqua , -1px -1px 2px aqua;
+    padding: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+@media  screen and ( max-width : 500px) {
+.model{
+    width: 90%;
+}
+}
