@@ -2,6 +2,7 @@ import React , {useContext , useState } from 'react'
 import {UserProvider} from '../../context'
 import { updateProfile  , uploadProfileImage } from '../../servises/user'
 import './index.css'; 
+import Skeleton from 'react-skeleton'           ; 
 import {motion , useAnimation} from 'framer-motion'
 function Settings() {
 
@@ -30,9 +31,13 @@ const handleFile =  (event)=>{
 const save = async ()=>{
   // if the user set any new image we want to update it in our database ; if not we don' t want to update it
   if(profileImage){
-    const {data , error} = await uploadProfileImage({token : userContext.CurrentUser.token , image: profileImage })
-    if(data){
-    alert("profile image updated") ; 
+    const {data   , error} = await uploadProfileImage({token : userContext.CurrentUser.token , image: profileImage })
+    if(data ){
+    updatedFrame.start({
+  x: [-1000 ,  0 ,  0 , -1000], 
+  transition: {duration : 4}
+})
+
     const newCurrentUserData = {...JSON.parse(userContext.CurrentUser.data) , image: data.image  }
     userContext.setCurrentUser({...userContext.CurrentUser , data : JSON.stringify( newCurrentUserData ) } )
     }
@@ -53,7 +58,7 @@ if(userName !== currentUserData.userName ){
 body.userName = userName
 }
 if(newPassword !== '' && newPassword.length >  4 ){
- body.password = newPassword 
+ body.newPassword = newPassword 
 }
 // if our body contains more than one property that means that the user has set at least one property  so we want to send the body to our backend; 
 if(Object.keys(body).length > 1){
@@ -68,8 +73,8 @@ if(error){
   setmyError(error)
 }
 if(data){
-  
-  data.loginData ? userContext.UpdateUser({...userContext , data :JSON.stringify(data) } ,   data.loginData ) : userContext.UpdateUser({...userContext , data :JSON.stringify(data) }   , data.loginData) ;
+console.log(data)  
+userContext.UpdateUser({...userContext , data :JSON.stringify(data) } ,   {userName  : userName || currentUserData.userName  , passWord : newPassword || oldPassword } )
 updatedFrame.start({
   x: [-1000 ,  0 ,  0 , -1000], 
   transition: {duration : 4}

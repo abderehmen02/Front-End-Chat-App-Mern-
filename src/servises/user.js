@@ -98,7 +98,7 @@ else if(responceData.type === "failed"){
 }
   }
   catch(error){
-console.log(error);
+(error);
 
   }
 }
@@ -118,7 +118,7 @@ try {
 const ResponceData = await responce.json()    ; 
 
 if(ResponceData.type === "success"){
-return {data : ResponceData.data , loginData : ResponceData.loginData }
+return {data : ResponceData.data  }
 }
 if(ResponceData.type === "failed"){
   return {error : ResponceData.error}
@@ -149,7 +149,7 @@ console.log("fetching in server file")
      }
     }
     catch(err){
-        console.log(err)
+        (err)
     }
 }
 

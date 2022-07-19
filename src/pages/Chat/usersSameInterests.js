@@ -12,7 +12,7 @@ function UserSameInterestsComponent({props}) {
         <h2 className='ModelTitle RequestsTitle' >User With Same Interests</h2>
         <div className='d-flex models flex-column align-items-center justify-content-center w-100' >
             {UserWithSameInterests.map(Person =>{
-            console.log(Person)
+           
                 return <div onClick={()=>{navigate(Person.userName)}} className='d-flex mt-3 flex-row w-100 align-items-center justify-items-around  modelItem w-90' >
  <AvatarEditor
         image={`http://localhost:2000/image/${Person.image}`}

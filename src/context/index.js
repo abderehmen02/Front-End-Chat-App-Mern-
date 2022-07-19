@@ -1,5 +1,7 @@
 import React , { useEffect, useState} from 'react';
-import {login} from '../servises/user'
+import {login} from '../servises/user' ; 
+import { Skeleton } from 'react-skeleton-screen'   ;
+import './index.css'
 export const UserProvider = React.createContext()  ; 
 
 function UserProviderComponent({children}) {
@@ -21,23 +23,21 @@ if(!storageUser || CurrentUser === false ){
 {children}
 </UserProvider.Provider>;
 }
+
 useEffect( async () => {
     if(storageUser){
  const { data , error } = await  login(storageUser);
- if(error){
-     console.log(error)
- }
- 
- if( data )
-     setCurrentUser(data)
+ if( error ){  console.log(error) }
+ if( data )    setCurrentUser(data)
 }
-
 } , [] )
 
 
 
 if(CurrentUser === null){
-    return <h1>Loading</h1>
+    return <div className='skeletonComponent' >
+        <h3>...Loading</h3>
+    </div>
 }
 // our provider will includes the user so we can access the user in all our pages
 // our provider will also include the update user function so we can update the user when ever we need

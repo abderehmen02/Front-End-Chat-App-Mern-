@@ -149,7 +149,6 @@ if(ResponceData.type === "success") {
 }
 
 else {
-    console.log(ResponceData.error)
     return {error: ResponceData.error}
 }
     }
@@ -174,12 +173,12 @@ if(ResponceData.type === "success") {
 }
 
 else {
-    console.log(ResponceData.error)
+   
     return {error: ResponceData.error}
 }
     }
 catch(error) {
-console.log(error);
+(error);
 return {error }
     }
 }

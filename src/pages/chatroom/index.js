@@ -146,7 +146,7 @@ const CancelFriendFn = async()=>{
 const CancelRequestFn = async()=>{
   const {data , error } = await cancelRequest(currentUser.token , {name : userData.name , userName : userData.userName})
   if(data){
-    console.log(data);
+
     window.location.reload(false) ; 
   }
   else if(error){

@@ -4,7 +4,6 @@ import {UserProvider} from '../context'
 import InterestsComponent from './interests.js'
 import {IsLogedOut} from "../helpers/userCheck"
 import {motion} from 'framer-motion'
-import {useNavigate} from 'react-router-dom'
 import './index.css'
 
 const animationVariants = {
@@ -75,7 +74,7 @@ console.log(err);
 <div>  <label>passWord</label>    <input type="password" value={passWord} onChange={(e)=>{setPassWord(e.target.value)}} ></input></div>
 <div> <label>rewrite passWord</label> <input type="password" value={SecondPassword} onChange={(e)=>{ setSecondPassword(e.target.value) }}></input></div>
 <div>  <label> Username</label>    <input value={userName.value} onChange={taggleUserName} ></input></div>
-<div className='userNameError' >  {Error === "userName" &&  <span className='UserError' > User Name Required </span>  }   </div>
+<div className='userNameError' >  {Error === "userName" &&  <span className='UserError' > User Name Is Not Valid  </span>  }   </div>
 <div>    <InterestsComponent props={{Interests , setInterests}} /></div>
 <button className='signUpBtn' onClick={ClickedSignUp}> Sign Up </button>
 </div>

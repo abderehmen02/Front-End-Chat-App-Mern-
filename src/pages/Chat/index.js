@@ -11,17 +11,18 @@ import './index.css'
 function Chat() {
 const MyContext = useContext(UserProvider)
 const CurrentUserData = JSON.parse(MyContext.CurrentUser.data)
+
 const [usersArray, setUsersArray] = useState([])  ; 
 const navigate = useNavigate()
 const [UserWithSameInterests, setUserWithSameInterests] = useState([])
 //functions
-
+console.log(UserWithSameInterests)
 const searchUserWithSameInterests = async ()=>{
   const {error , data} = await SearchUserInterests( JSON.parse( MyContext.CurrentUser.data).interests.join(',')) ;
   if(error) {console.log(error);
   return}  ;
   if(data){
-setUserWithSameInterests(data.usersWithSameInterests)
+setUserWithSameInterests(data.usersWithSameInterests.filter(user => user.userName !== CurrentUserData.userName ) )
  }
 }
 
